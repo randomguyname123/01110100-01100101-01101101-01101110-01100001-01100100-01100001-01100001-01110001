@@ -1,0 +1,62 @@
+<html>
+    <body>
+        <script>
+          //calculadora:
+          //número inicial
+          var numInicial = prompt("Por favor, informe o primeiro número de sua operação (se for quebrado, substitua a vírgula por um ponto)! ");
+          //tipo de operação(multiplicação, divisão, adição ou subtração)
+          var operationType = prompt("Por favor, informe o tipo de operação (multiplicação, divisão, adição ou subtração)!");
+
+          while(operationType != "adição" && operationType != "subtração" && operationType != "multiplicação" && operationType != "divisão"){
+            alert("Por favor, informe uma operação correta (digite: multiplicação, divisão, adição ou subtração)");
+            operationType = prompt("Por favor, informe o tipo de operação (multiplicação, divisão, adição ou subtração)!");
+          }
+
+          //número final
+          var numFinal = prompt("Por favor, informe o segundo número de sua operação (se for quebrado, substitua a vírgula por um ponto)!");
+
+          //função que converte string em número
+          numInicial = parseInt(numInicial);
+          numFinal = parseInt(numFinal);
+
+          //resultado
+          var resultado = 0;
+
+          if(operationType === "adição"){
+            resultado = numInicial + numFinal;
+          }
+          else if(operationType === "subtração"){
+            resultado = numInicial - numFinal;
+          }
+          else if(operationType === "multiplicação"){
+            resultado = numInicial * numFinal;
+          }
+          else if(operationType === "divisão"){
+            resultado = numInicial / numFinal;
+          }
+
+          var resposta = alert("Seu resultado é: "+resultado);
+          
+          /*if(keyCode === "up_arrow"){
+            reset();
+          }
+          
+          //resetar
+          function reset(){
+            var resetar = prompt("Deseja realizar outro cálculo?");
+            while(resetar != sim || resetar != não){
+              alert("Por favor, informe corretamente (digite: sim ou não).")
+              resetar = prompt("Deseja realizar outro cálculo?");
+            }
+          }
+
+          if(resetar === "sim"){
+            numInicial = prompt("Por favor, informe o primeiro número de sua operação (se for quebrado, substitua a vírgula por um ponto)! ");
+            operationType = prompt("Por favor, informe o tipo de operação (multiplicação, divisão, adição ou subtração)!");
+            numFinal = prompt("Por favor, informe o segundo número de sua operação (se for quebrado, substitua a vírgula por um ponto)!");
+            resposta = alert("Seu resultado é: "+resultado);
+          }*/
+
+        </script>
+    </body>
+</html>
